@@ -1,0 +1,184 @@
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #F9BDBD;
+}
+
+/* الصورة */
+.photo {
+  width: 90%;
+  max-width: 500px;
+}
+
+
+h1 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 50px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* buttons */
+button {
+  font-family: "Poppins", sans-serif;
+  padding: 17px 30px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+#yes {
+  background: #ff4da6;
+  color: white;
+}
+
+#no {
+  background: #999;
+  color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+}
+
+.content video {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.message {
+  max-width: 400px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: rgb(255, 230, 247);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message {
+    text-align: center;
+  }
+}
+
+#pageGift {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #000, #800040);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+h2 {
+  font-family: "Brush Script MT", cursive;
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  font-size: 45px;
+  z-index: 100;
+  background: linear-gradient(to right, #ff4da6, #ff99cc, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.photos img {
+  position: absolute;
+  width: 190px;
+  border-radius: 15px;
+  animation: fade 10s;
+  z-index: 1; /* تحت */
+  opacity: 0.8; /* تخفيف */
+}
+
+@keyframes fade {
+  0% {opacity: 0; transform: scale(0.5);}
+  50% {opacity: 1;}
+  100% {opacity: 0; transform: scale(1.2);}
+}
+
+/* زر */
+#next {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 15px;
+  background: #ff4da6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* surprise style */
+#page2 {
+  background: linear-gradient(to bottom, #000, #ff4da6);
+  color: white;
+  position: fixed;   /* رجعناها */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;  /* 👈 هذا هو المهم */
+}
+
+/* قلوب */.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+#back1, #back2 {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  padding: 7px 10px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+    z-index: 9999; /* مهم بزاف */
+}
+
